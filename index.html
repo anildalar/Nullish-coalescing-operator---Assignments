@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Coesing Operator ??</title>
+    </head>
+    <body>
+        <form id="myForm">
+            <input type="text" name="name" id="n" /><br />
+            <input type="text" name="surname" id="sn" /><br />
+            <input type="button" name="submit" value="Submit" onclick="submitData(this)" />
+        </form>
+        <span id="result1"></span>
+        <span id="result2"></span>
+
+
+        <script>
+            function submitData(e) {
+               let n = document.getElementById('n').value;
+               let sn = document.getElementById('sn').value;
+
+               document.getElementById('result1').innerHTML = n ?? '';
+               document.getElementById('result2').innerHTML = sn ?? '';
+              
+
+               
+            }
+        </script>
+    </body>
+</html>
