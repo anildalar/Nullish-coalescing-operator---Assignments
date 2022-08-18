@@ -10,19 +10,13 @@
             <input type="button" name="submit" value="Submit" onclick="submitData(this)" />
         </form>
         <span id="result1"></span>
-        <span id="result2"></span>
 
 
         <script>
             function submitData(e) {
-               let n = document.getElementById('n').value;
-               let sn = document.getElementById('sn').value;
-
-               document.getElementById('result1').innerHTML = n ?? '';
-               document.getElementById('result2').innerHTML = sn ?? '';
-              
-
-               
+                let n = document.getElementById('n').value;
+                let sn = document.getElementById('sn').value;
+                document.getElementById('result1').innerHTML = ((n==='' || sn==='')?null:n+" "+sn) ?? ''; 
             }
         </script>
     </body>
